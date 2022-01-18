@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:14:52 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/18 16:13:44 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/18 18:01:07 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,11 @@ void PhoneBook::ShowPhonebook()
 {
 	int i;
 
-	if (index == 1)
+	if (index == 0)
+	{
 		std::cout << "No contact" << std::endl;
+		return ;
+	}
 	i = -1;
 	while (++i < index)
 	{
@@ -92,7 +95,7 @@ void PhoneBook::ShowPhonebook()
 	{
 		std::cout << "Invalid input value." << std::endl;
 		std::cin.clear();
-		std::cin.ignore(INT_MAX, '\n');
+		std::cin.ignore(1000, '\n');
 		return;
 	}
 	phonebook[i - 1].ShowAllInfo();

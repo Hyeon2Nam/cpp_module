@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:19:45 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/18 16:18:55 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/18 17:04:09 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 
 #include <iostream>
+#include <string>
 #include <iomanip>
 
 class Contact
