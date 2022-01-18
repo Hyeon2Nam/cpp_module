@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:14:52 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/18 18:21:41 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/18 18:41:48 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ void Contact::AddContact()
 void Contact::ShowContact()
 {
 	if (first_name.length() > 10)
-		std::cout << std::setw(10) << first_name.replace(9, 1, ".").substr(0, 10) << '|';
+		std::cout << std::setw(9) << first_name.substr(0, 9) << ".|";
 	else
 		std::cout << std::setw(10) << first_name << '|';
 	if (last_name.length() > 10)
-		std::cout << std::setw(10) << last_name.replace(9, 1, ".").substr(0, 10) << '|';
+		std::cout << std::setw(9) << last_name.substr(0, 9) << ".|";
 	else
 		std::cout << std::setw(10) << last_name << '|';
 	if (nickname.length() > 10)
-		std::cout << std::setw(10) << nickname.replace(9, 1, ".").substr(0, 10) << '|' << std::endl;
+		std::cout << std::setw(9) << nickname.substr(0, 9) << ".|" << std::endl;
 	else
 		std::cout << std::setw(10) << nickname << '|' << std::endl;
 }
