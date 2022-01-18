@@ -6,9 +6,12 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:19:45 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/18 16:03:15 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/18 16:18:55 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
 #include <iostream>
 #include <iomanip>
@@ -38,3 +41,5 @@ public:
 	void AddPhoneBook();
 	void ShowPhonebook();
 };
+
+#endif
