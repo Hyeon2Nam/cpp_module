@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:05:02 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/21 21:47:34 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/21 23:44:40 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc > 4 || argc < 4)
+	if (argc != 4)
 	{
 		if (argc > 4)
 			std::cout << "Error. Too many argument value." << std::endl;

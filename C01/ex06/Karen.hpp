@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/21 18:05:02 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/21 23:43:52 by hyenam           ###   ########.fr       */
+/*   Created: 2022/01/21 21:58:29 by hyenam            #+#    #+#             */
+/*   Updated: 2022/01/21 22:54:57 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#ifndef KAREN_HPP
+#define KAREN_HPP
 
-int main(void)
+#include <iostream>
+#include <string>
+
+class Karen
 {
-	Karen karen;
+private:
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
 
-	karen.complain("debug");
-	karen.complain("INFO");
-	karen.complain("warning");
-	karen.complain("ERROR");
-	return (0);
-}
+public:
+	void complain(std::string level);
+	void changeStr(std::string& str);
+};
+
+#endif
