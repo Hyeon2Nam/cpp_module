@@ -6,15 +6,15 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/20 19:32:58 by hyenam            #+#    #+#              #
-#    Updated: 2022/01/21 14:49:20 by hyenam           ###   ########.fr        #
+#    Updated: 2022/01/21 14:47:41 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = brain
 CC := clang++
 RM := rm -rf
 CFLAGS := -Wall -Werror -Wextra -std=c++98
-SRCS = 	./main.cpp ./newZombie.cpp ./randomChump.cpp ./Zombie.cpp
+SRCS = 	./main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
