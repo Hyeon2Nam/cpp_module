@@ -6,11 +6,11 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/20 19:32:58 by hyenam            #+#    #+#              #
-#    Updated: 2022/01/21 14:59:37 by hyenam           ###   ########.fr        #
+#    Updated: 2022/01/21 18:10:10 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = weapon
 CC := clang++
 RM := rm -rf
 CFLAGS := -Wall -Werror -Wextra -std=c++98

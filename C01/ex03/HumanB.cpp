@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 15:01:42 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/21 18:06:06 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/21 18:23:16 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 HumanB::HumanB(std::string name) : name(name) {};
 
-void HumanB::setWeapon(Weapon &w)
+void HumanB::setWeapon(Weapon *w)
 {
-	weapon = &w;
+	weapon = w;
 }
 
 void HumanB::attack()
