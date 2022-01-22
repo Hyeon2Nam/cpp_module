@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 19:32:51 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/20 22:02:52 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/22 15:22:39 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,16 @@
 class Zombie
 {
 private:
+	std::string z_name;
 
 public:
-	std::string z_name;
 	Zombie();
 	Zombie(std::string name);
 	~Zombie();
 	void announce(void);
+	void setName(std::string name);
 };
-	Zombie *zombieHorde(int n, std::string name);
 
+Zombie *zombieHorde(int n, std::string name);
 
 #endif

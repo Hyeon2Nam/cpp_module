@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 21:42:24 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/20 22:03:05 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/22 15:24:47 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Zombie *zombieHorde(int n, std::string name)
 	i = -1;
 	while (++i < n)
 	{
-		z[i].z_name = name;
+		z[i].setName(name);
 		z[i].announce();
 	}
 	return (z);

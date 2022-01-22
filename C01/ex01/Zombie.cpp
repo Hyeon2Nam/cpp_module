@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 19:32:48 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/20 21:58:07 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/22 15:23:43 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,9 @@ Zombie::~Zombie()
 void Zombie::announce(void)
 {
 	std::cout << "<" + z_name + ">" " BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void Zombie::setName(std::string name)
+{
+	z_name = name;
 }
