@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 19:32:47 by hyenam            #+#    #+#             */
-/*   Updated: 2022/01/21 14:55:59 by hyenam           ###   ########.fr       */
+/*   Updated: 2022/01/22 15:34:15 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
 {
 	std::string str = "HI THIS IS BRAIN";
 	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+	std::string& stringREF = str;
 
 	std::cout << "str      :" << &str << std::endl;
 	std::cout << "stringPTR:" << &stringPTR << std::endl;
