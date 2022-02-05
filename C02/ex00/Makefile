@@ -6,14 +6,14 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/20 19:32:58 by hyenam            #+#    #+#              #
-#    Updated: 2022/02/05 13:49:03 by hyenam           ###   ########.fr        #
+#    Updated: 2022/02/05 19:11:22 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
-CC := clang++
+CXX := clang++
 RM := rm -rf
-CFLAGS := -Wall -Werror -Wextra -std=c++98
+CXXFLAGS := -Wall -Werror -Wextra -std=c++98
 SRCS = 	./main.cpp ./Fixed.cpp
 
 OBJS = $(SRCS:.cpp=.o)
@@ -23,7 +23,7 @@ all : $(NAME)
 .PHONY : all clean fclean re
 
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+		$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
