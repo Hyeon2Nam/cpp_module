@@ -17,14 +17,37 @@ public:
 	Fixed(const float v);
 	Fixed(Fixed const &src);
 	~Fixed();
+
 	Fixed &operator=(Fixed const &rhs);
+
+	bool operator>(Fixed const &rhs);
+	bool operator<(Fixed const &rhs);
+	bool operator>=(Fixed const &rhs);
+	bool operator<=(Fixed const &rhs);
+	bool operator==(Fixed const &rhs);
+	bool operator!=(Fixed const &rhs);
+
+	Fixed operator+(Fixed const &rhs);
+	Fixed operator-(Fixed const &rhs);
+	Fixed operator*(Fixed const &rhs);
+	Fixed operator/(Fixed const &rhs);
+
+	Fixed &operator++();
+	Fixed operator++(int n);
+	Fixed &operator--();
+	Fixed operator--(int n);
+
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 	float toFloat(void) const;
 	int toInt(void) const;
+
+	static Fixed &max(Fixed &a, Fixed &b);
+	static Fixed &min(Fixed &a, Fixed &b);
+	static const Fixed &max(Fixed const &a, Fixed const &b);
+	static const Fixed &min(Fixed const &a, Fixed const &b);
 };
 
-std::ostream &			operator<<( std::ostream & o, Fixed const & i );
-
+std::ostream &operator<<( std::ostream & o, Fixed const & i );
 
 #endif /* *********************************************************** FIXED_H */
