@@ -6,12 +6,12 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/20 19:32:58 by hyenam            #+#    #+#              #
-#    Updated: 2022/02/05 19:11:32 by hyenam           ###   ########.fr        #
+#    Updated: 2022/02/05 19:29:18 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
-CXX := clang++
+CXX := c++
 RM := rm -rf
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
 SRCS = 	./main.cpp ./Fixed.cpp
