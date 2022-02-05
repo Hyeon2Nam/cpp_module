@@ -16,6 +16,18 @@ Fixed::Fixed(const Fixed &src)
 	*this = src;
 }
 
+Fixed::Fixed(const int v)
+{
+	std::cout << "Int constructor called" << std::endl;
+	value = v << s_bit;
+}
+
+Fixed::Fixed(const float v)
+{
+	std::cout << "Float constructor called" << std::endl;
+	value = static_cast<int>(roundf(v * (1 << s_bit)));
+}
+
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
@@ -36,20 +48,34 @@ Fixed &Fixed::operator=(Fixed const &rhs)
 	return (*this);
 }
 
+std::ostream &operator<<(std::ostream &o, Fixed const &i)
+{
+	return (o << i.toFloat());
+}
+
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return (value);
 }
 
 void Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
-	value = raw;
+	this->value = raw;
+}
+
+float Fixed::toFloat(void) const
+{
+	return (static_cast<float>(value) /  (1 << s_bit));
+}
+
+int Fixed::toInt(void) const
+{
+	return (value >> s_bit);
 }
 
 /*
