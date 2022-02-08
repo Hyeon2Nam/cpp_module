@@ -33,9 +33,9 @@ public:
 	Fixed operator/(Fixed const &rhs);
 
 	Fixed &operator++();
-	Fixed operator++(int n);
+	Fixed operator++(int);
 	Fixed &operator--();
-	Fixed operator--(int n);
+	Fixed operator--(int);
 
 	int getRawBits(void) const;
 	void setRawBits(int const raw);

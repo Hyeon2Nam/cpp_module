@@ -42,7 +42,7 @@ Fixed &Fixed::operator++()
 	return (*this);
 }
 
-Fixed Fixed::operator++(int n)
+Fixed Fixed::operator++(int)
 {
 	Fixed res(*this);
 	value++;
@@ -55,7 +55,7 @@ Fixed &Fixed::operator--()
 	return (*this);
 }
 
-Fixed Fixed::operator--(int n)
+Fixed Fixed::operator--(int)
 {
 	Fixed res(*this);
 	value--;
