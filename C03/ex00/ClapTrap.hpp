@@ -8,12 +8,13 @@ class ClapTrap
 {
 private:
 	std::string name;
-	int hitPoints;
-	int energyPoints;
-	int attackDamage;
+	int hit_points;
+	int energy_points;
+	int attack_damage;
 
 public:
 	ClapTrap();
+	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const &src);
 	~ClapTrap();
 
@@ -23,7 +24,5 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };
-
-std::ostream &operator<<(std::ostream &o, ClapTrap const &i);
 
 #endif /* ******************************************************** CLAPTRAP_H */
