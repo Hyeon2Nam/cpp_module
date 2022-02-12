@@ -27,7 +27,6 @@ ClapTrap::ClapTrap(const ClapTrap &src)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap Destructor called" << std::endl;
-
 }
 
 /*
@@ -52,19 +51,45 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 
 void ClapTrap::attack(std::string const &target)
 {
-
+	std::cout << "ClapTrap " << this->name << " attack " << target << ", causing " << this->attack_damage << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-
+	std::cout << "ClapTrap " << this->name << " was attacked and suffered " << amount << " points of damage!" << std::endl;
+	this->hit_points -= amount;
+	if (this->hit_points <= 0)
+		std::cout << "ClapTrap " << this->name << " is died!" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-
+	std::cout << "ClapTrap " << this->name << " recovered " << amount - this->hit_points << " points after being repaired!" << std::endl;
+	this->hit_points += amount;
+	if (this->hit_points > 10)
+		hit_points = 10;
+	std::cout << "Now CrapTrap " << this->name << "'s HP is " << this->hit_points << std::endl;
 }
 
+void ClapTrap::setDamage(int damage)
+{
+	this->attack_damage = damage;
+}
+
+std::string ClapTrap::getName(void)
+{
+	return this->name;
+}
+
+int ClapTrap::getAttackDamage(void)
+{
+	return this->attack_damage;
+}
+
+int ClapTrap::getEnergyPoints(void)
+{
+	return this->energy_points;
+}
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */

@@ -23,6 +23,12 @@ public:
 	void attack(std::string const &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+	
+	void setDamage(int damage);
+	
+	std::string getName(void);
+	int getAttackDamage(void);
+	int getEnergyPoints(void);
 };
 
 #endif /* ******************************************************** CLAPTRAP_H */
