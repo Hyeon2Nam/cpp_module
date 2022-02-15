@@ -129,6 +129,9 @@ FragTrap의 특정 기능은 void highFivesGuys(void)이며, 표준 출력에 �
 Extend your main function to test everything.
 모든 것을 테스트하기 위해 당신의 주요 기능을 확장하세요.
 
+
+
+
 # Exercise 03: Now it’s weird!
 # 연습 03: 이제 이상해!
 
@@ -136,7 +139,7 @@ Now, you will create a monster by making a Claptrap that’s half Fragtrap, half
 이제 반은 Fragtrap이고 반은 Scav Trap인 Claptrap을 만들어서 몬스터를 만들게 됩니다.
 
 It will be named DiamondTrap, and it will inherit from both the FragTrap AND the ScavTrap.
-DiamondTrap이라는 이름을 갖게 될 것이며, FragTrap과 Scav Trap의 이름을 이어받게 될 것입니다.
+DiamondTrap이라는 이름을 갖게 될 것이며, FragTrap과 ScavTrap의 이름을 이어받게 될 것입니다.
 
 Very risky and horrible act the DiamondTrap class will declare a private attribute called name like the one inside ClapTrap.
 매우 위험하고 끔찍한 행동은 DiamondTrap 클래스가 ClapTrap 안에 있는 이름이라는 개인 속성을 선언합니다.
