@@ -11,7 +11,7 @@ private:
 	bool gateMode;
 public:
 	ScavTrap();
-	ScavTrap(std::string _name);
+	ScavTrap(std::string name);
 	ScavTrap(ScavTrap const &src);
 	~ScavTrap();
 
