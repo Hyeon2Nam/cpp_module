@@ -19,6 +19,8 @@ public:
 	DiamondTrap &operator=(DiamondTrap const &rhs);
 
 	using ScavTrap::attack;
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
 	void whoAmI(void);
 };
 

@@ -62,6 +62,35 @@ DiamondTrap &DiamondTrap::operator=(DiamondTrap const &rhs)
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void DiamondTrap::takeDamage(unsigned int amount)
+{
+	std::cout << "DiamondTrap " << this->name << " was attacked and suffered " << amount << " points of damage!" << std::endl;
+
+	this->hit_points -= amount;
+	if (this->hit_points <= 0)
+	{
+		this->hit_points = 0;
+		std::cout << "DiamondTrap " << this->name << " is died!" << std::endl;
+	}
+}
+
+void DiamondTrap::beRepaired(unsigned int amount)
+{
+	int temp;
+
+	if (amount + this->hit_points > 100)
+		temp = 100 - this->hit_points;
+	else
+		temp = amount;
+	
+	this->hit_points += temp;
+	if (this->hit_points > 100)
+		hit_points = 100;
+
+	std::cout << "DiamondTrap " << this->name << " recovered " << temp << " points after being repaired!" << std::endl;
+	std::cout << "Now DiamondTrap " << this->name << "'s HP is " << this->hit_points << std::endl;
+}
+
 void DiamondTrap::whoAmI(void)
 {
 	std::cout << "My name is " << this->_name << " of DiamondTrap." << std::endl;

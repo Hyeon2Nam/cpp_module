@@ -82,6 +82,9 @@ this function will display a message on the standard outputs to anounce that Sca
 Extend your main function to test everything.
 모든 것을 테스트하기 위해 당신의 주요 기능을 확장하세요.
 
+
+
+
 # Exercise 02: Repetitive work
 # 연습 02: 반복 작업
 
@@ -136,7 +139,7 @@ Extend your main function to test everything.
 # 연습 03: 이제 이상해!
 
 Now, you will create a monster by making a Claptrap that’s half Fragtrap, half ScavTrap.
-이제 반은 Fragtrap이고 반은 Scav Trap인 Claptrap을 만들어서 몬스터를 만들게 됩니다.
+이제 반은 Fragtrap이고 반은 Scav Trap인 Claptrap 몬스터를 만들게 됩니다.
 
 It will be named DiamondTrap, and it will inherit from both the FragTrap AND the ScavTrap.
 DiamondTrap이라는 이름을 갖게 될 것이며, FragTrap과 ScavTrap의 이름을 이어받게 될 것입니다.
