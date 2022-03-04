@@ -6,7 +6,7 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/20 19:32:58 by hyenam            #+#    #+#              #
-#    Updated: 2022/02/28 14:15:39 by hyenam           ###   ########.fr        #
+#    Updated: 2022/03/04 18:14:28 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = Animal
 CXX := c++
 RM := rm -rf
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
-SRCS = 	./main.cpp ./Animal.cpp ./Dog.cpp ./Cat.cpp ./Brain.cpp
+SRCS = 	./main.cpp ./AMateria.cpp ./Cure.cpp ./Ice.cpp\
+		./Character.cpp ./MateriaSource.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

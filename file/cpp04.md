@@ -165,7 +165,7 @@ The rest should work as before.
 
 
 # Exercise 03: Interface & recap
-# 
+# 인터페이스 & 리캡
 
 
 Turn-in directory : ex03/
@@ -198,7 +198,7 @@ class AMateria
 ~~~
 
 Create the concrete Materias Ice and Cure . Their type will be their name in lowercase ("ice" for Ice, etc...).
-콘크리트 마테리아스 Ice과 Cure를 만드십시오. 그들의 type은 소문자("ice 등의 경우 Ice")가 될 것이다.
+구체적인 마테리어 Ice과 Cure를 만드십시오. 그들의 type은 소문자("ice 등의 경우 Ice")가 될 것이다.
 
 Their clone() method will, of course, return a new instance of the real Materia’s type.
 물론 그들의 clone() method는 진짜 마테리아의 유형의 새 객체를 반환할 것이다.
@@ -244,11 +244,11 @@ The unequip method must NOT delete Materia!
 비경쟁 방법으로 마테리아를 삭제해서는 안 됩니다!
 
 The use(int, ICharacter&) method will have to use the Materia at the idx slot, and pass target as parameter to the AMateria::use method.
-사용 방법(int, ICharacter&)은 idx 슬롯에서 마테리아를 사용하고, 표적을 아마테리아의 매개 변수로  AMateria::use를 사용합니다.
+use(int, ICharacter&)은 idx 슬롯에서 마테리아를 사용하고, 표적을 AMateria::use의 매개 변수로  AMateria::use를 사용합니다.
 
 빨강
 Of course, you’ll have to be able to support ANY AMateria in a Character’s inventory.
-물론, 캐릭터의 인벤토리에 있는 모든 아마테리아를 지원할 수 있어야 합니다.
+물론, 캐릭터의 인벤토리에 있는 모든 AMateria를 지원할 수 있어야 합니다.
 
 Your Character must have a constructor taking its name as a parameter.
 Character는 이름을 매개 변수로 사용하는 생성자가 있어야 합니다.
@@ -283,7 +283,7 @@ Much in the same way as for Character, the Source can know at most 4 Materia, wh
 캐릭터와 마찬가지로 소스도 기껏해야 4개의 마테리아를 알 수 있는데, 마테리아가 유일할 필요는 없다.
 
 createMateria(std::string const &) will return a new Materia, which will be a copy of the Materia (previously learned by the Source) which type equals the parameter.
-createMateria(std::string const &) will return a new Materia, which will be a copy of the Materia (previously learned by the Source) which type equals the parameter.
+createMateria(std::string const &)는 새로운 Materia를 반환하며, 이 Materia는 형식과 매개변수가 동일한 Materia(소스에 의해 이전에 학습된 Materia)의 복사본이 될 것이다.
 
 
 Returns 0 if the type is unknown.

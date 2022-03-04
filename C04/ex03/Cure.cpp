@@ -1,55 +1,53 @@
-#include "ICharacter.hpp"
+#include "Cure.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ICharacter::ICharacter()
-{
-}
+Cure::Cure() : AMateria("cure") {}
 
-ICharacter::ICharacter( const ICharacter & src )
+Cure::Cure(const Cure &src)
 {
+	*this = src;
 }
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-ICharacter::~ICharacter()
+Cure::~Cure()
 {
 }
-
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-ICharacter &				ICharacter::operator=( ICharacter const & rhs )
+Cure &Cure::operator=(Cure const &rhs)
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if (this != &rhs)
+	{
+		this->_type = rhs.getType();
+	}
 	return *this;
 }
-
-std::ostream &			operator<<( std::ostream & o, ICharacter const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
+AMateria *Cure::clone(void) const
+{
+	return new Cure();
+}
+
+void Cure::use(ICharacter &target)
+{
+	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
-
 
 /* ************************************************************************** */

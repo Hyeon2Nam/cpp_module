@@ -1,55 +1,53 @@
-#include "IMateriaSource.hpp"
+#include "Ice.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-IMateriaSource::IMateriaSource()
-{
-}
+Ice::Ice() : AMateria("ice") {}
 
-IMateriaSource::IMateriaSource( const IMateriaSource & src )
+Ice::Ice(const Ice &src)
 {
+	*this = src;
 }
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-IMateriaSource::~IMateriaSource()
+Ice::~Ice()
 {
 }
-
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-IMateriaSource &				IMateriaSource::operator=( IMateriaSource const & rhs )
+Ice &Ice::operator=(Ice const &rhs)
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if (this != &rhs)
+	{
+		this->_type = rhs.getType();
+	}
 	return *this;
 }
-
-std::ostream &			operator<<( std::ostream & o, IMateriaSource const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
+AMateria *Ice::clone(void) const
+{
+	return new Ice();
+}
+
+void Ice::use(ICharacter &target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
-
 
 /* ************************************************************************** */
