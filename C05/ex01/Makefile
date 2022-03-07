@@ -6,7 +6,7 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/20 19:32:58 by hyenam            #+#    #+#              #
-#    Updated: 2022/03/07 17:44:51 by hyenam           ###   ########.fr        #
+#    Updated: 2022/03/07 17:45:03 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Bureaucrat
 CXX := c++
 RM := rm -rf
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
-SRCS = 	./main.cpp ./Bureaucrat.cpp
+SRCS = 	./main.cpp ./Bureaucrat.cpp ./Form.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
