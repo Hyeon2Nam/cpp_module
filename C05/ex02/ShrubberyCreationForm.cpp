@@ -44,9 +44,39 @@ std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &i)
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void ShrubberyCreationForm::makeFile(void)
+std::string ShrubberyCreationForm::makeFileName(void) const
 {
+	return this->getTarget() + "_shrubbery";
+}
 
+std::string ShrubberyCreationForm::makeTree(void) const
+{
+	std::string tree = "       _-_\\ \n\
+    /~~   ~~\\ \n\
+ /~~         ~~\\ \n\
+{               }\n\
+ \\  _-     -_  /\n\
+   ~  \\\\ //  ~\n\
+_- -   | | _- _\n\
+  _ -  | |   -_\n\
+      // \\\\";
+	return tree;
+}
+
+void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
+{
+	try
+	{
+		if (executor.getGrade() > this->getExegrade())
+			throw GradeTooLowException();
+		std::fstream fout(makeFileName(), std::ios::out);
+		fout << makeTree();
+		fout.close();
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 }
 
 /*

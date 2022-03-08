@@ -49,21 +49,6 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &i)
 ** --------------------------------- METHODS ----------------------------------
 */
 
-const char *Bureaucrat::GradeTooHighException(void)
-{
-	return ("Out of grade range.(Too high)");
-}
-
-const char *Bureaucrat::GradeTooLowException(void)
-{
-	return ("Out of grade range.(Too low)");
-}
-
-const char *Bureaucrat::GradeTooLowException(void)
-{
-	return ("It cannot be executed because it has not been signed.");
-}
-
 void Bureaucrat::incrementGrade(const Bureaucrat &i, int value)
 {
 	std::cout << "Increase " << i.getName() << "'s grade by " << value << "." << std::endl;
@@ -109,12 +94,14 @@ void Bureaucrat::signForm(Form &f)
 	}
 }
 
-void Bureaucrat::executeForm(Form &f)
+void Bureaucrat::executeForm(Form const &form)
 {
 	try
 	{
-		if (f.getSigned() == false)
+		if (form.getSigned() == false)
 			throw(NoSignedException());
+		form.execute(*this);
+		std::cout << this->getName() << " executes " << form.getTarget() << std::endl;
 	}
 	catch (const std::exception &e)
 	{

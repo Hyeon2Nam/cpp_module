@@ -72,7 +72,7 @@ std::string Form::getName(void) const
 	return _name;
 }
 
-std::string Form::getName(void) const
+std::string Form::getTarget(void) const
 {
 	return _target;
 }

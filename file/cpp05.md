@@ -174,7 +174,7 @@ In any event, the base form must be an abstract class.
 어떤 경우에도 기본 양식은 추상 클래스여야 합니다.
 
 Finish this by adding an executeForm(Form const & form) function to the bureaucrat.
-관료에 executeForm(Form const & form) 함수를 추가하여 이것을 마무리한다.
+bureaucrat에 executeForm(Form const & form) 함수를 추가하여 이것을 마무리한다.
 
 It must attempt to execute the form, and if it’s a success, print something like <bureaucrat> executes <form>.
 반드시 폼 실행을 시도해야 하며, 성공한다면 <bureaucrat>와 같은 것을 인쇄하면 <form>이 실행된다.

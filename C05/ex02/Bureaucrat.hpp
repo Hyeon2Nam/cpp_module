@@ -26,32 +26,38 @@ public:
 	class GradeTooHighException : public std::exception
 	{
 	public:
-		const char *what() const throw();
+		const char *what() const throw()
+		{
+			return ("Out of grade range.(Too high)");
+		};
 	};
 
 	class GradeTooLowException : public std::exception
 	{
 	public:
-		const char *what() const throw();
+		const char *what() const throw()
+		{
+			return ("Out of grade range.(Too low)");
+		};
 	};
 
 	class NoSignedException : public std::exception
 	{
 	public:
-		const char *what() const throw();
+		const char *what() const throw()
+		{
+			return ("It cannot be executed because it has not been signed.");
+		};
 	};
 
 	void incrementGrade(const Bureaucrat &i, int value);
 	void decrementGrade(const Bureaucrat &i, int value);
 
-	const char *GradeTooHighException(void);
-	const char *GradeTooLowException(void);
-
 	std::string getName(void) const;
 	int getGrade(void) const;
 
 	void signForm(Form &f);
-	void executeForm(Form &f);
+	void executeForm(Form const &form);
 };
 
 std::ostream &operator<<(std::ostream &o, Bureaucrat const &i);

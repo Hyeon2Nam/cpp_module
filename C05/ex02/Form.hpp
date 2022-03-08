@@ -48,6 +48,8 @@ public:
 	bool getSigned(void) const;
 
 	void beSigned(Bureaucrat const &i);
+
+	virtual void execute(Bureaucrat const &executor) const = 0;
 };
 
 std::ostream &operator<<(std::ostream &o, Form const &i);

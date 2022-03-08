@@ -6,17 +6,17 @@
 
 Form::Form(std::string name, int req_grade, int exe_grade) : _name(name), _req_grade(req_grade), _exe_grade(exe_grade), _signed(false)
 {
-	if (req_grade < 0 || exe_grade < 0)
+	if (req_grade < 0)
 		throw GradeTooHighException();
-	else if (req_grade > 150 || exe_grade > 150)
+	else if (req_grade > 150)
 		throw GradeTooLowException();
 };
 
 Form::Form(const Form &src) : _name(src.getName()), _req_grade(src.getReqgrade()), _exe_grade(src.getExegrade()), _signed(src.getSigned())
 {
-	if (_req_grade < 0 || _exe_grade < 0)
+	if (_req_grade < 0)
 		throw GradeTooHighException();
-	else if (_req_grade > 150 || _exe_grade > 150)
+	else if (_req_grade > 150)
 		throw GradeTooLowException();
 }
 
