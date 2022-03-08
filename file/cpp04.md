@@ -305,6 +305,7 @@ int main()
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 	ICharacter* me = new Character("me");
+	ICharacter b = me;
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
