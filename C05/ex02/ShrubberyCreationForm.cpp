@@ -36,7 +36,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 
 std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &i)
 {
-	o << "Name = " << i.getName() << ", Grade = ";
+	o << "Name = " << i.getName() << "\nTarget = " << i.getTarget() << "\nRequired grades = " << i.getReqgrade() << "\nExec grades = " << i.getExegrade();
 	return o;
 }
 
@@ -65,18 +65,11 @@ _- -   | | _- _\n\
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-	try
-	{
-		if (executor.getGrade() > this->getExegrade())
-			throw GradeTooLowException();
-		std::fstream fout(makeFileName(), std::ios::out);
-		fout << makeTree();
-		fout.close();
-	}
-	catch (const std::exception &e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+	if (executor.getGrade() > this->getExegrade())
+		throw GradeTooLowException();
+	std::fstream fout(makeFileName(), std::ios::out);
+	fout << makeTree();
+	fout.close();
 }
 
 /*

@@ -17,10 +17,9 @@ public:
 
 	std::string makeFileName(void) const;
 	std::string makeTree(void) const;
-	void execute(Bureaucrat const & executor) const;
+	void execute(Bureaucrat const &executor) const;
 };
 
 std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &i);
-
 
 #endif /* ******************************************* SHRUBBERYCREATIONFORM_H */
