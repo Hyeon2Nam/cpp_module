@@ -27,19 +27,10 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &rhs)
 {
-	if (this != &rhs)
-	{
-		Form::operator=(rhs);
-	}
+	Form::operator=(rhs);
 	return *this;
 }
 
-std::ostream &operator<<(std::ostream &o, RobotomyRequestForm const &i)
-{
-	o << "Name = " << i.getName() << "\nTarget = " << i.getTarget() << "\nRequired grades = " << i.getReqgrade() << "\nExec grades = " << i.getExegrade();
-
-	return o;
-}
 
 /*
 ** --------------------------------- METHODS ----------------------------------

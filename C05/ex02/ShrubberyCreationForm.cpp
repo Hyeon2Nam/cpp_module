@@ -27,17 +27,8 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs)
 {
-	if (this != &rhs)
-	{
-		Form::operator=(rhs);
-	}
+	Form::operator=(rhs);
 	return *this;
-}
-
-std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &i)
-{
-	o << "Name = " << i.getName() << "\nTarget = " << i.getTarget() << "\nRequired grades = " << i.getReqgrade() << "\nExec grades = " << i.getExegrade();
-	return o;
 }
 
 /*

@@ -27,18 +27,8 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm const &rhs)
 {
-	if (this != &rhs)
-	{
-		Form::operator=(rhs);
-	}
+	Form::operator=(rhs);
 	return *this;
-}
-
-std::ostream &operator<<(std::ostream &o, PresidentialPardonForm const &i)
-{
-	o << "Name = " << i.getName() << "\nTarget = " << i.getTarget() << "\nRequired grades = " << i.getReqgrade() << "\nExec grades = " << i.getExegrade();
-
-	return o;
 }
 
 /*
