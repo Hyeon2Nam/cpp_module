@@ -31,13 +31,13 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &r
 	return *this;
 }
 
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
 void RobotomyRequestForm::RandomDrilling(void) const
 {
+	std::srand(time(0));
 	if (std::rand() % 2)
 		std::cout << "Drrrrrrrrrrr....................." << std::endl;
 	else
