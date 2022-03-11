@@ -4,9 +4,9 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-PresidentialPardonForm::PresidentialPardonForm() : Form("president", "target", 25, 5){};
+PresidentialPardonForm::PresidentialPardonForm() : Form("president pardon", "target", 25, 5){};
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("president", target, 25, 5){};
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("president pardon", target, 25, 5){};
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &src) : Form(src.getName(), src.getTarget(), src.getReqgrade(), src.getExegrade())
 {

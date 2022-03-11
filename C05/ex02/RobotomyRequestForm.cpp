@@ -4,9 +4,9 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-RobotomyRequestForm::RobotomyRequestForm() : Form("robotomy", "target", 72, 45){};
+RobotomyRequestForm::RobotomyRequestForm() : Form("robotomy request", "target", 72, 45){};
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("robotomy", target, 72, 45){};
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("robotomy request", target, 72, 45){};
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src) : Form(src.getName(), src.getTarget(), src.getReqgrade(), src.getExegrade())
 {

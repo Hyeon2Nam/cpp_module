@@ -46,7 +46,7 @@ public:
 	public:
 		const char *what() const throw()
 		{
-			return ("It cannot be executed because it has not been signed.");
+			return ("It has not been signed.");
 		};
 	};
 

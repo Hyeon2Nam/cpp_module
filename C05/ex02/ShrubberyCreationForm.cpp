@@ -4,9 +4,9 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ShrubberyCreationForm::ShrubberyCreationForm() : Form("shrubbery", "target", 145, 137){};
+ShrubberyCreationForm::ShrubberyCreationForm() : Form("shrubbery creation", "target", 145, 137){};
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("shrubbery", target, 145, 137){};
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("shrubbery creation", target, 145, 137){};
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src) : Form(src.getName(), src.getTarget(), src.getReqgrade(), src.getExegrade())
 {
