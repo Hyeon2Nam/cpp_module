@@ -38,11 +38,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &r
 
 void RobotomyRequestForm::RandomDrilling(void) const
 {
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int> dis(1, 100);
-
-	if (dis(gen) > 50)
+	if (std::rand() % 2)
 		std::cout << "Drrrrrrrrrrr....................." << std::endl;
 	else
 		std::cout << "it’s a failure." << std::endl;
