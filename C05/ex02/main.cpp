@@ -30,6 +30,8 @@ int main()
 		bob.signForm(*s);
 		bob.executeForm(*s);
 		std::cout << "---------------" << std::endl;
+
+		delete s;
 	}
 	std::cout << "============================================" << std::endl;
 	std::cout << "===========RobotomyRequestForm==============" << std::endl;
@@ -57,6 +59,7 @@ int main()
 		bob.signForm(*s);
 		bob.executeForm(*s);
 		std::cout << "---------------" << std::endl;
+		delete s;
 	}
 	std::cout << "============================================" << std::endl;
 	std::cout << "===========PresidentialPardonForm===========" << std::endl;
@@ -84,5 +87,6 @@ int main()
 		bob.signForm(*s);
 		bob.executeForm(*s);
 		std::cout << "---------------" << std::endl;
+		delete s;
 	}
 }

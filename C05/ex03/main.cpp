@@ -12,6 +12,9 @@ int main()
 	Form *b = someRandomIntern.makeForm("president pardon", "bbb");
 	if (!rrf || !a || !b)
 		return (1);
+	delete rrf;
+	delete a;
+	delete b;
 	std::cout << *rrf << std::endl;
 	std::cout << "--------------------" << std::endl;
 	std::cout << *a << std::endl;
@@ -20,6 +23,10 @@ int main()
 	std::cout << "--------------------" << std::endl;
 	Form *c = someRandomIntern.makeForm("aa", "cccccc");
 	if (!c)
+	{
+		delete c;
 		return (1);
+	}
 	std::cout << *c << std::endl;
+	delete c;
 }
