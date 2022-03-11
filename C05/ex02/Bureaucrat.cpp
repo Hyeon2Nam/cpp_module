@@ -71,7 +71,7 @@ void Bureaucrat::decrementGrade(const Bureaucrat &i, int value)
 	try
 	{
 		if (_grade + value > 150)
-			GradeTooLowException();
+			throw GradeTooLowException();
 		_grade += value;
 	}
 	catch (const std::exception &e)

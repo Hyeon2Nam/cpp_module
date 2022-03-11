@@ -49,16 +49,6 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &i)
 ** --------------------------------- METHODS ----------------------------------
 */
 
-const char *Bureaucrat::GradeTooHighException(void)
-{
-	throw(std::out_of_range("Out of grade range.(Too high)"));
-}
-
-const char *Bureaucrat::GradeTooLowException(void)
-{
-	throw(std::out_of_range("Out of grade range.(Too low)"));
-}
-
 void Bureaucrat::incrementGrade(const Bureaucrat &i, int value)
 {
 	std::cout << "Increase " << i.getName() << "'s grade by " << value << "." << std::endl;
@@ -81,7 +71,7 @@ void Bureaucrat::decrementGrade(const Bureaucrat &i, int value)
 	try
 	{
 		if (_grade + value > 150)
-			GradeTooLowException();
+			throw GradeTooLowException();
 		_grade += value;
 	}
 	catch (const std::exception &e)

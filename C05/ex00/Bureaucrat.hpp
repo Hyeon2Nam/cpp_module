@@ -25,8 +25,23 @@ public:
 	void incrementGrade(const Bureaucrat &i, int value);
 	void decrementGrade(const Bureaucrat &i, int value);
 
-	const char *GradeTooHighException(void);
-	const char *GradeTooLowException(void);
+	class GradeTooHighException : public std::exception
+	{
+	public:
+		const char *what() const throw()
+		{
+			return ("Out of grade range.(Too high)");
+		};
+	};
+
+	class GradeTooLowException : public std::exception
+	{
+	public:
+		const char *what() const throw()
+		{
+			return ("Out of grade range.(Too low)");
+		};
+	};
 
 	std::string getName(void) const;
 	int getGrade(void) const;
