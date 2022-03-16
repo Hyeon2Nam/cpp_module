@@ -1,24 +1,28 @@
 #ifndef CONVERT_HPP
-# define CONVERT_HPP
+#define CONVERT_HPP
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
 
 class Convert
 {
+private:
+	std::string _value;
 
-	public:
+public:
+	Convert();
+	Convert(std::string value);
+	Convert(Convert const &src);
+	~Convert();
 
-		Convert();
-		Convert( Convert const & src );
-		~Convert();
+	const char *stringToChar(void);
+	int stringToInt(void);
+	float stringToFloat(void);
+	double stringToDouble(void);
 
-		Convert &		operator=( Convert const & rhs );
+	std::string getValue(void) const;
 
-	private:
-
+	Convert &operator=(Convert const &rhs);
 };
-
-std::ostream &			operator<<( std::ostream & o, Convert const & i );
 
 #endif /* ********************************************************* CONVERT_H */
