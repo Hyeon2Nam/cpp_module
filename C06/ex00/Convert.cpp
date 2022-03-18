@@ -14,7 +14,7 @@ Convert::Convert(std::string value) : _value(value)
 
 	if (*cstr && std::strcmp(cstr, "f"))
 		throw("invalid value");
-	if (value[0] != '-' && std::isinf(_dvalue))
+	if (value[0] != '-' && isinf(_dvalue))
 		_isPinf = true;
 	else
 		_isPinf = false;
@@ -138,7 +138,9 @@ char Convert::stringToChar() const
 
 int Convert::stringToInt() const
 {
-	if (isinf(this->getDValue()) || isnan(this->getDValue()))
+	if (isnan(this->getDValue()) ||
+		std::numeric_limits<int>::max() < this->getDValue() ||
+		std::numeric_limits<int>::min() > this->getDValue())
 		throw ImpossibleException();
 
 	int i = static_cast<int>(this->stringToDouble());
