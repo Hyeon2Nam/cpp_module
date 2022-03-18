@@ -4,13 +4,20 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Convert::Convert() : _value(""), _dvalue(0){};
+Convert::Convert() : _value(""), _dvalue(0), _isPinf(false){};
 
 Convert::Convert(std::string value) : _value(value)
 {
 	char *cstr = NULL;
 
 	_dvalue = strtod(this->getValue().c_str(), &cstr);
+
+	if (*cstr && std::strcmp(cstr, "f"))
+		throw("invalid value");
+	if (value[0] != '-' && std::isinf(_dvalue))
+		_isPinf = true;
+	else
+		_isPinf = false;
 };
 
 Convert::Convert(const Convert &src)
@@ -72,6 +79,10 @@ std::ostream &operator<<(std::ostream &o, Convert const &i)
 	try
 	{
 		float f = i.stringToFloat();
+
+		if (i.getIsPinf() == true)
+			o << "+";
+
 		o << f;
 
 		if (f == n)
@@ -88,12 +99,15 @@ std::ostream &operator<<(std::ostream &o, Convert const &i)
 
 	try
 	{
-		if (isnan(i.stringToDouble()))
+		double d = i.getDValue();
+		if (isnan(d))
 			throw Convert::NanException();
 
-		o << i.stringToDouble();
+		if (i.getIsPinf() == true)
+			o << "+";
+		o << d;
 
-		if (i.stringToDouble() == n)
+		if (d == n)
 			o << ".0";
 	}
 	catch (const std::exception &e)
@@ -114,7 +128,7 @@ char Convert::stringToChar() const
 
 	c = static_cast<char>(stringToDouble());
 
-	if (isinf(c) || isnan(this->stringToDouble()))
+	if (isinf(this->getDValue()) || isnan(this->getDValue()))
 		throw ImpossibleException();
 	else if (!std::isprint(c))
 		throw NonDisplaybleException();
@@ -124,8 +138,7 @@ char Convert::stringToChar() const
 
 int Convert::stringToInt() const
 {
-
-	if (isnan(this->stringToDouble()) || isinf(this->stringToDouble()))
+	if (isinf(this->getDValue()) || isnan(this->getDValue()))
 		throw ImpossibleException();
 
 	int i = static_cast<int>(this->stringToDouble());
@@ -160,6 +173,11 @@ std::string Convert::getValue(void) const
 double Convert::getDValue(void) const
 {
 	return _dvalue;
+}
+
+bool Convert::getIsPinf(void) const
+{
+	return _isPinf;
 }
 
 /* ************************************************************************** */

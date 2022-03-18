@@ -10,6 +10,7 @@ class Convert
 private:
 	std::string _value;
 	double _dvalue;
+	bool _isPinf;
 
 public:
 	Convert();
@@ -24,6 +25,7 @@ public:
 
 	std::string getValue(void) const;
 	double getDValue(void) const;
+	bool getIsPinf(void) const;
 
 	class ImpossibleException : public std::exception
 	{
@@ -52,7 +54,14 @@ public:
 		}
 	};
 
-
+	class OverFlowException : public std::exception
+	{
+	public:
+		const char *what() const throw()
+		{
+			return ("overflow");
+		}
+	};
 
 	Convert &operator=(Convert const &rhs);
 };
