@@ -13,6 +13,12 @@ public:
 };
 
 Base *generate(void);
+
 void identify(Base *p);
+void identify(Base &p);
+
+int isA(Base &p);
+int isB(Base &p);
+int isC(Base &p);
 
 #endif /* ************************************************************ BASE_H */

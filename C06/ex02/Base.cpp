@@ -59,6 +59,60 @@ void identify(Base *p)
 		std::cout << "NULL" << std::endl;
 }
 
+int isA(Base &p)
+{
+	try
+	{
+		A &a = dynamic_cast<A &>(p);
+		static_cast<void>(a);
+		return (1);
+	}
+	catch (std::bad_cast)
+	{
+		return (0);
+	}
+}
+
+int isB(Base &p)
+{
+	try
+	{
+		B &a = dynamic_cast<B &>(p);
+		static_cast<void>(a);
+		return (1);
+	}
+	catch (std::bad_cast)
+	{
+		return (0);
+	}
+}
+
+int isC(Base &p)
+{
+	try
+	{
+		C &a = dynamic_cast<C &>(p);
+		static_cast<void>(a);
+		return (1);
+	}
+	catch (std::bad_cast)
+	{
+		return (0);
+	}
+}
+
+void identify(Base &p)
+{
+	if (isA(p))
+		std::cout << "Type : A" << std::endl;
+	else if (isB(p))
+		std::cout << "Type : B" << std::endl;
+	else if (isC(p))
+		std::cout << "Type : C" << std::endl;
+	else
+		std::cout << "NULL" << std::endl;
+}
+
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */

@@ -1,4 +1,7 @@
 #include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
 int main()
 {
@@ -10,5 +13,13 @@ int main()
 		std::cout << "-----------" << std::endl;
 		delete b;
 	}
-	
+
+	A a;
+	B b;
+	C c;
+
+	identify(a);
+	identify(b);
+	identify(c);
+	identify(NULL);
 }

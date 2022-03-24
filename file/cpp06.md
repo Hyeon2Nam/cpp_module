@@ -65,8 +65,7 @@ char: '*'
 int: 42
 float: 42.0f
 double: 42.0
-```
-
+``
 
 ## Chapter IV
 ## 챕터 IV
