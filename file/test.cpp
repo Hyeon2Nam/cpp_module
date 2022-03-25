@@ -1,16 +1,14 @@
 #include <iostream>
 #include <string>
 
-class A
+template <typename T, int n>
+void sum(T t)
 {
-	// virtual void q();
-};
-class B : public A
-{
-};
+	std::cout << t + n << std::endl;
+}
 
-int main()
+int main(void)
 {
-	A *a = new B();
-	B *b = dynamic_cast<B *>(a);
+	int a = 1;
+	sum<int, 2>(a);
 }

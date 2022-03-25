@@ -10,12 +10,12 @@ Convert::Convert(std::string value) : _value(value)
 {
 	char *cstr = NULL;
 
-	if (_value[0] != '-' && _value[0] != '+' && !std::isdigit(_value[0]))
-		throw("invalid value");
+	// if (_value[0] != '-' && _value[0] != '+' && !std::isdigit(_value[0]))
+	// 	throw("invalid value");
 
 	_dvalue = strtod(this->getValue().c_str(), &cstr);
 
-	if (*cstr && std::strcmp(cstr, "f"))
+	if ((*cstr && std::strcmp(cstr, "f")) || _value[0] == 'f')
 		throw("invalid value");
 	if (value[0] != '-' && isinf(_dvalue))
 		_isPinf = true;
