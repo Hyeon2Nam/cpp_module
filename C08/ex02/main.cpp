@@ -1,28 +1,28 @@
 #include <iostream>
-#include "easyfind.hpp"
+#include "mutantstack.hpp"
 
-int main(void)
+int main()
 {
-
-	std::vector<int> v;
-
-	for (int i = 0; i < 5; i++)
-		v.push_back(i);
-
-
-	std::cout << "v = {";
-	for (std::vector<int>::iterator i = v.begin(); i != v.end(); i++)
-		std::cout << *i << ", ";
-		std::cout << "}" << std::endl;
-
-		std::cout << "====[exe easyfind]====" << std::endl;
-	try
+	MutantStack<int> mstack;
+	mstack.push(5);
+	mstack.push(17);
+	std::cout << mstack.top() << std::endl;
+	mstack.pop();
+	std::cout << mstack.size() << std::endl;
+	mstack.push(3);
+	mstack.push(5);
+	mstack.push(737);
+	//[...]
+	mstack.push(0);
+	MutantStack<int>::iterator it = mstack.begin();
+	MutantStack<int>::iterator ite = mstack.end();
+	++it;
+	--it;
+	while (it != ite)
 	{
-		std::cout << *easyfind(v, 2) << std::endl;
-		std::cout << *easyfind(v, 10) << std::endl;
+		std::cout << *it << std::endl;
+		++it;
 	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	std::stack<int> s(mstack);
+	return 0;
 }

@@ -6,7 +6,7 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/20 19:32:58 by hyenam            #+#    #+#              #
-#    Updated: 2022/03/22 17:25:40 by hyenam           ###   ########.fr        #
+#    Updated: 2022/03/27 17:46:40 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = mutantstack
 CXX := c++
 RM := rm -rf
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
-SRCS = 	./main.cpp
+SRCS = 	./main.cpp ./mutantstack.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
