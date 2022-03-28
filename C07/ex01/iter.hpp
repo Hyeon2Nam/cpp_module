@@ -15,7 +15,7 @@ template <typename T>
 void iter(T *arr, int size, T (*func)(T, T))
 {
 	for (int i = 0; i < size - 1; i++)
-		std::cout << "min( a, b ) = " << (*func)(arr[i], arr[i + 1]) << std::endl;
+		std::cout << "min( " << arr[i] << ", " << arr[i + 1] << " ) = " << (*func)(arr[i], arr[i + 1]) << std::endl;
 }
 
 template <typename T>

@@ -58,6 +58,8 @@ int main(void)
 	{
 		numbers[i] = rand();
 	}
+	std::cout << "====[numbers]====" << std::endl;
+	numbers.printArr();
 	delete[] mirror;
 	return 0;
 }
