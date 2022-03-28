@@ -13,7 +13,7 @@ int main(void)
 		numbers[i] = value;
 		mirror[i] = value;
 	}
-
+	
 	std::cout << "====[numbers]====" << std::endl;
 	numbers.printArr();
 	std::cout << "====[mirror]====" << std::endl;

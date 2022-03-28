@@ -14,7 +14,8 @@ private:
 public:
 	Array()
 	{
-		_arr = new T[0];
+		_arr = NULL;
+		std::cout << _arr << std::endl;
 		_size = 0;
 	};
 	Array(unsigned int n)
@@ -29,6 +30,7 @@ public:
 		{
 			delete[] _arr;
 			_arr = NULL;
+			_size = 0;
 		}
 	};
 
@@ -36,6 +38,12 @@ public:
 	{
 		if (this != &rhs)
 		{
+			if (this->_size != 0)
+			{
+				delete[] _arr;
+				_arr = NULL;
+				_size = 0;
+			}
 			_size = rhs.size();
 			_arr = new T[rhs.size()];
 			for (unsigned int i = 0; i < rhs.size(); i++)
@@ -44,7 +52,7 @@ public:
 		return *this;
 	};
 
-	T &operator[](int i) const
+	const T &operator[](int i) const
 	{
 		if (i >= static_cast<int>(this->size()) || i < 0)
 			throw OutOfLimits();
