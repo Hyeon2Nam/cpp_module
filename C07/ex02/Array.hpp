@@ -14,8 +14,7 @@ private:
 public:
 	Array()
 	{
-		_arr = NULL;
-		std::cout << _arr << std::endl;
+		_arr = new T[0];
 		_size = 0;
 	};
 	Array(unsigned int n)
