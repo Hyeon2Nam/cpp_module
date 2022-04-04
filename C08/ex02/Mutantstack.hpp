@@ -35,12 +35,12 @@ public:
 		return this->c.end();
 	}
 
-	const_iterator cbegin()
+	const_iterator cbegin() const
 	{
 		return this->c.cbegin();
 	}
 
-	const_iterator cend()
+	const_iterator cend() const 
 	{
 		return this->c.cend();
 	}
@@ -55,12 +55,12 @@ public:
 		return this->c.rend();
 	}
 
-	const_reverse_iterator crbegin()
+	const_reverse_iterator crbegin() const
 	{
 		return this->c.crbegin();
 	}
 
-	const_reverse_iterator crend()
+	const_reverse_iterator crend() const
 	{
 		return this->c.crend();
 	}

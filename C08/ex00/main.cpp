@@ -11,7 +11,7 @@ int main(void)
 
 
 	std::cout << "v = {";
-	for (typename std::vector<int>::iterator i = v.begin(); i != v.end(); i++)
+	for (std::vector<int>::iterator i = v.begin(); i != v.end(); i++)
 		std::cout << *i << ", ";
 		std::cout << "}" << std::endl;
 
