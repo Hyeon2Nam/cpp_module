@@ -14,8 +14,8 @@ int main()
 		sp.addNumber(17);
 		sp.addNumber(9);
 		sp.addNumber(11);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "shortestSpan:" << sp.shortestSpan() << std::endl;
+		std::cout << "longestSpan:" << sp.longestSpan() << std::endl;
 	}
 	catch (const std::exception &e)
 	{
@@ -28,8 +28,8 @@ int main()
 		for (unsigned int i = 0; i < sp.getSize()- 1; i++)
 			sp.addNumber(rand() % 1000);
 
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "shortestSpan:" << sp.shortestSpan() << std::endl;
+		std::cout << "longestSpan:" << sp.longestSpan() << std::endl;
 	}
 	catch (const std::exception &e)
 	{
@@ -42,7 +42,7 @@ int main()
 	{
 		Span sp = Span(5);
 		sp.addNumber(5);
-		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << "shortestSpan:" << sp.shortestSpan() << std::endl;
 	}
 	catch (const std::exception &e)
 	{
